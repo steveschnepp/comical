@@ -803,11 +803,11 @@ void ComicalCanvas::OnKeyDown(wxKeyEvent& event)
 	
 	switch(event.GetKeyCode()) {
 
-	case WXK_PRIOR:
+	case WXK_PAGEUP:
 		PrevPageTurn();
 		break;
 
-	case WXK_NEXT:
+	case WXK_PAGEDOWN:
 		NextPageTurn();
 		break;
 

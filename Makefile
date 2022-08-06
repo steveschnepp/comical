@@ -1,6 +1,6 @@
-LDFLAGS = `wx-config --libs` -lz -ljpeg
+LDFLAGS = `wx-config --libs std,aui` -lz -ljpeg -lm -lstdc++
 ifeq ($(DEBUG),1)
-LDFLAGS += -g -lm -lstdc++
+LDFLAGS += -g
 endif
 INSTALL = install
 INSTALL_PROGRAM = $(INSTALL)

@@ -1,0 +1,13 @@
+*.d
+*.o
+*.a
+
+/src/firstpage.h
+/src/fullscreen.h
+/src/lastpage.h
+/src/next.h
+/src/nextpage.h
+/src/prev.h
+/src/prevpage.h
+/src/rot_ccw.h
+/src/rot_cw.h

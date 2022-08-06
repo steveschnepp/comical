@@ -35,10 +35,10 @@ orientation(NORTH),
 m_uiWidth(1),
 m_uiHeight(1),
 m_bitmapType(wxBITMAP_TYPE_INVALID),
-m_bitmapLeft(NULL),
-m_bitmapRight(NULL),
-m_bitmapFull(NULL),
-m_bitmapThumb(NULL)
+m_bitmapLeft(),
+m_bitmapRight(),
+m_bitmapFull(),
+m_bitmapThumb()
 {
 	extractDimensions(headerStream);
 }
@@ -93,7 +93,7 @@ void ComicPage::extractDimensions(wxInputStream *stream)
 	const wxUint8 tiffLittleHeader[] = { 0x49, 0x49, 0x2a, 0x00 };
 	const wxUint8 gif87Header[] = { 'G', 'I', 'F', '8', '7', 'a' };
 	const wxUint8 gif89Header[] = { 'G', 'I', 'F', '8', '9', 'a' };
-	const wxUint8 pngHeader[] = { '\211', 'P', 'N', 'G', '\r', '\n', '\032', '\n' };
+	const wxUint8 pngHeader[] = { 211, 'P', 'N', 'G', '\r', '\n', 32, '\n', };
 
 	wxUint16 width16, height16;
 	wxUint16 count, tag, type;
